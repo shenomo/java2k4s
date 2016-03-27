@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="goodPM" class="task006.GoodPM" scope="prototype">
+
+    </bean>
+
+    <bean id="baseCust" class="task006.BadCustomer" scope="prototype">
+        <constructor-arg ref="goodPM"/>
+    </bean>
+
+    <bean id="team1" class="task006.Team" scope="prototype">
+
+    </bean>
+
+    <bean id="user1" class="task006.User" scope="prototype">
+
+    </bean>
+
+
+    <bean id="IOSproject" class="task006.Project" scope="prototype">
+        <constructor-arg ref="goodPM"/>
+        <constructor-arg ref="team1"/>
+        <constructor-arg ref="user1"/>
+
+    </bean>
+
+
+
+
+
+</beans>
