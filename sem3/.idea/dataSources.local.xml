@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - Sem3DB@localhost" uuid="c5f8fb46-592d-4188-81c4-389ba6fcc62a">
+      <secret-storage>memory</secret-storage>
+      <user-name>zamkovoyilya</user-name>
+      <schema-pattern>Sem3DB.pg_catalog Sem3DB.public</schema-pattern>
+      <default-schemas>Sem3DB.public</default-schemas>
+    </data-source>
+  </component>
+</project>
