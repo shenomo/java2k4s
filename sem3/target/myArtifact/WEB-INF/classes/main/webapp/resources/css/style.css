@@ -1,0 +1,123 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+#content {
+    background: url("gradient-background.jpg.png") no-repeat;
+    /*background-repeat: no-repeat;*/
+    /*padding: 10px 100px 20px 100px;*/
+    background-size: 100% 100%;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+}
+
+.registration {
+    display: inline;
+    width: 100%;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+    font-size: 120px;
+}
+
+.adviceButtons {
+    width: 38%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.addingBook {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 80px;
+}
+.showClass{
+    margin: 0px 40px 40px 40px;
+    padding-top: 30px;
+}
+.searchField{
+    margin: 20px 0px 0px 20px;
+
+}
+.buttons {
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.buttons button {
+    color: rgb(209, 209, 217);
+    text-decoration: none;
+    outline: none;
+    border-radius: 3px;
+    background: linear-gradient(rgb(110, 112, 120), rgb(81, 81, 86)) rgb(110, 112, 120);
+    box-shadow: 0 1px rgba(255, 255, 255, .2) inset,
+    0 3px 5px rgba(0, 1, 6, .5),
+    0 0 1px 1px rgba(0, 1, 6, .2);
+    transition: .2s ease-in-out;
+    text-shadow: 0 -1px 2px rgba(0, 0, 0, .2);
+    padding: 3px 0px 5px 0px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 130px;
+    height: 40px;
+    font-size: medium;
+    float: left;
+}
+
+.buttons button:hover:not(:active) {
+    background: linear-gradient(rgb(126, 126, 134), rgb(70, 71, 76)) rgb(126, 126, 134);
+}
+
+.buttons button:active {
+    top: 1px;
+    background: linear-gradient(rgb(76, 77, 82), rgb(56, 57, 62)) rgb(76, 77, 82);
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5) inset,
+    0 2px 3px rgba(0, 0, 0, .5) inset,
+    0 1px 1px rgba(255, 255, 255, .1);
+}
+
+main {
+    margin: 30px 100px 30px 100px;
+    color: white;
+}
+
+.registrationPage {
+    display: inline;
+}
+
+.registrationPage p {
+    text-align: center;
+}
+
+.registrationPage h4 {
+    text-align: left;
+    font-size: x-large;
+    margin-top: 170px;
+    padding-left: 470px;
+}
+
+
+
+h2 {
+    text-align: center;
+    font-size: x-large;
+    margin-top: 320px;
+}
+.message{
+
+    text-align: center;
+
+
+}
+.bottom {
+    position: relative;
+}
