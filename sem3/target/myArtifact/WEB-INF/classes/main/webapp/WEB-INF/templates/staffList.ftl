@@ -41,7 +41,9 @@
             <input type="submit" value="Go to Plane Page">
         </form>
 
-
+        <form action="/stat">
+            <input type="submit" value="Go to Stat Page">
+        </form>
 
 
     <#list staffList as staff>

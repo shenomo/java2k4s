@@ -16,4 +16,9 @@ public interface FlightRepository extends JpaRepository<FlightEntity, Long> {
 
     List<FlightEntity> findAll();
 
+    List<FlightEntity> findAllByFromDirection(String direct);
+
+    List<FlightEntity> findAllByToDirection(String direction);
+
+    List<FlightEntity> findAllByFromDirectionAndToDirection(String from, String to);
 }

@@ -80,7 +80,14 @@ public class AuthProviderImpl implements AuthenticationProvider {
 
         List<GrantedAuthority> authorities = new ArrayList<>();
         authorities.add(grantedAuthority);
-        return new UsernamePasswordAuthenticationToken(user, null, authorities);
+        if(user!=null) {
+            return new UsernamePasswordAuthenticationToken(user, null, authorities);
+        }else if(staff!=null){
+            return new UsernamePasswordAuthenticationToken(staff, null, authorities);
+        } else{
+            return new UsernamePasswordAuthenticationToken(admin, null, authorities);
+        }
+
     }
 
     @Override

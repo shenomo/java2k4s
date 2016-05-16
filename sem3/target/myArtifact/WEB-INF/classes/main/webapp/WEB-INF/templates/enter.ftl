@@ -6,7 +6,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/resources/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 <body>
 <div id="content">
@@ -14,7 +14,7 @@
 
     <div class="registrationPage">
 
-    <@sf.form action='/login/process' method='POST' name="enter_form" modelAttribute="enterForm">
+    <@sf.form action='/login/process' method='POST' name="enter_form" modelAttribute="enterForm" style = "margin-left: 500px">
 
             <@sf.input path="login" type="text" name="login" id="login" placeholder="Enter your login"/>
 

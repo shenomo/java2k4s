@@ -50,4 +50,19 @@ public class FlightServiceImpl implements FlightService {
 
         return flightEntity;
     }
+
+    @Override
+    public List<FlightEntity> getAllFromDirection(String direct) {
+        return flightRepository.findAllByFromDirection(direct);
+    }
+
+    @Override
+    public List<FlightEntity> getAllToDirection(String direction) {
+        return flightRepository.findAllByToDirection(direction);
+    }
+
+    @Override
+    public List<FlightEntity> findAllByFormDirectionAndToDirection(String form, String to) {
+        return flightRepository.findAllByFromDirectionAndToDirection(form, to);
+    }
 }

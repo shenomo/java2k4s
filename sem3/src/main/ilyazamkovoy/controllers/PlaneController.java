@@ -63,8 +63,7 @@ public class PlaneController {
 
         modelMap.addAttribute("message", message);
 
-        return "addPlane";
-
+        return "redirect: /planes/addNewPlane";
 
     }
 

@@ -9,6 +9,7 @@ import main.ilyazamkovoy.services.AdminService;
 import main.ilyazamkovoy.services.StaffService;
 import main.ilyazamkovoy.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
@@ -37,8 +38,6 @@ public class EnterController {
     @Autowired
     AdminService adminService;
 
-    UserForm userForm;
-
 
     @RequestMapping(method = RequestMethod.GET)
     public String sendUserForm(ModelMap modelMap) {
@@ -50,15 +49,29 @@ public class EnterController {
     }
 
 
-    @RequestMapping( method = RequestMethod.POST)
+    @RequestMapping(value = "/auf",method = RequestMethod.GET)
     public String enterUser(@ModelAttribute("enterForm") @Valid EnterForm enterForm, BindingResult result, ModelMap modelMap) {
 
-        UserEntity userEntity = userService.getUserByEmail(enterForm.getLogin());
+        UserEntity userEntity = null;
+        AdminEntity adminEntity = null;
+        StaffEntity staffEntity = null;
 
-        AdminEntity adminEntity = adminService.getAdminByLogin(enterForm.getLogin());
+        try {
+            userEntity = (UserEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        }catch (Exception e){
 
-        StaffEntity staffEntity = staffService.getStaffByLogin(enterForm.getLogin());
+        }
+        try{
+            adminEntity = (AdminEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        }catch (Exception e){
 
+        }
+
+        try{
+            staffEntity = (StaffEntity) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        }catch (Exception e){
+
+        }
 
         if (userEntity != null) {
 

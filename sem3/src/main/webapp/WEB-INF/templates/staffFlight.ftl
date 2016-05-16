@@ -27,7 +27,9 @@
         <form href="/logout">
             <input type="submit" value="logout">
         </form>
-
+        <form action="/stat">
+            <input type="submit" value="Go to Stat Page">
+        </form>
 
     <#if flight??>
     <table class="table vehicle-features">

@@ -16,4 +16,10 @@ public interface FlightService {
 
     FlightEntity getFlightByIdentity(String identity);
 
+    List<FlightEntity> getAllFromDirection(String direct);
+
+    List<FlightEntity> getAllToDirection(String direction);
+
+    List<FlightEntity> findAllByFormDirectionAndToDirection(String form, String to);
+
 }

@@ -7,10 +7,7 @@
 <head>
     <title></title>
     <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/css/jquery-ui.css">
-    <script type="application/javascript" src="/js/jquery-1.11.3.js"></script>
-    <script type="application/javascript" src="/js/search.js"></script>
-    <script type="text/javascript" src="/js/jquery-ui.js"></script>
+
 </head>
 <body>
 <div id="content">
@@ -28,7 +25,7 @@
 
 
 
-    <form href="/logout">
+    <form action="/logout">
         <input type="submit" value="logout">
     </form>
 
@@ -43,6 +40,9 @@
         <input type="submit" value="Go to Plane Page">
     </form>
 
+    <form action="/stat">
+        <input type="submit" value="Go to Stat Page">
+    </form>
 
 <#list planeList as plane>
 <table class="table vehicle-features">

@@ -27,6 +27,9 @@
         <form action="/flight/client">
             <input type="submit" value="Go to See All Flights">
         </form>
+        <form action="/stat">
+            <input type="submit" value="Go to Stat Page">
+        </form>
 
     <#if flight??>
     <table class="table vehicle-features">

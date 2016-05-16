@@ -15,8 +15,7 @@ body, html {
 }
 
 .registration {
-    display: inline;
-    width: 100%;
+    margin-left: 500px;
 }
 
 h1 {
