@@ -20,19 +20,19 @@
     <h1>World Of Flight</h1>
 
 
-        <form href="/logout">
+        <form href="/logout" style = "margin-left: 500px">
             <input type="submit" value="logout">
         </form>
 
-        <form action="/flight/client">
+        <form action="/flight/client" style = "margin-left: 500px">
             <input type="submit" value="Go to See All Flights">
         </form>
-        <form action="/stat">
+        <form action="/stat" style = "margin-left: 500px">
             <input type="submit" value="Go to Stat Page">
         </form>
 
     <#if flight??>
-    <table class="table vehicle-features">
+    <table class="table vehicle-features" style = "margin-left: 500px">
         <tr>
             <td>Departure Time</td>
             <td id="model">${flight.departureTime}</td>

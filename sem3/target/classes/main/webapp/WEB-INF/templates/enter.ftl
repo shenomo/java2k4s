@@ -33,6 +33,14 @@
 
 
     </@sf.form>
+        <form action="/registration/user" style = "margin-left: 500px" >
+            <input type="submit" value="Registration for user">
+        </form>
+
+
+        <form action="/registration/staff" style = "margin-left: 500px" >
+            <input type="submit" value="Registration for staff">
+        </form>
 
 
 

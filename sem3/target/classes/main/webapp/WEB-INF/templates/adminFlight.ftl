@@ -26,26 +26,26 @@
     <h1>World Of Flight</h1>
 
 
-    <form href="/logout">
+    <form href="/logout" style = "margin-left: 500px">
         <input type="submit" value="logout">
     </form>
 
-    <form action="/staff/adminStaff">
+    <form action="/staff/adminStaff" style = "margin-left: 500px">
         <input type="submit" value="Go to Staff Page">
     </form>
-    <form action="/flight/admin">
+    <form action="/flight/admin" style = "margin-left: 500px">
         <input type="submit" value="Go to Flight Page">
     </form>
-    <form action="/planes/addNewPlane">
+    <form action="/planes/addNewPlane" style = "margin-left: 500px">
         <input type="submit" value="Go to Plane Page">
     </form>
-    <form action="/stat">
+    <form action="/stat" style = "margin-left: 500px">
         <input type="submit" value="Go to Stat Page">
     </form>
 
 
 <#list flightList as flight>
-<table class="table vehicle-features">
+<table class="table vehicle-features" style = "margin-left: 500px">
     <tr>
         <td>Departure Time</td>
         <td id="model">${flight.departureTime}</td>
@@ -70,7 +70,7 @@
 </#list>
 
 
-<@sf.form action='/flight/admin' method='POST' name="flight_form" modelAttribute="flightForm">
+<@sf.form action='/flight/admin' method='POST' name="flight_form" modelAttribute="flightForm" style = "margin-left: 500px">
 
     <@sf.input path="departureTime" type="text" name="departureTime" id="departureTime" placeholder="Enter your Departure Time"/>
 

@@ -6,7 +6,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" type="text/css" href="/resources/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
 </head>
 
 <body>
@@ -15,7 +15,7 @@
 
     <div class="registrationPage">
 
-    <@sf.form action='/registration' method='POST' name="registration_form" modelAttribute="userForm">
+    <@sf.form action='/registration/user' method='POST' name="registration_form" modelAttribute="userForm" style = "margin-left: 500px">
 
         <@sf.input path="firstName" type="text" name="firstName" id="firstName" placeholder="Enter your First Name"/>
 

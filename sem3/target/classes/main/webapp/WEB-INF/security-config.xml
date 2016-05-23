@@ -24,7 +24,7 @@
                 default-target-url="/login/auf"
                 always-use-default-target="true"
                 authentication-failure-url="/login?error=true"/>
-        <security:logout logout-url="/j_spring_security_logout" logout-success-url="/login"/>
+        <security:logout logout-url="/logout" logout-success-url="/login"/>
     </security:http>
 
     <security:authentication-manager>

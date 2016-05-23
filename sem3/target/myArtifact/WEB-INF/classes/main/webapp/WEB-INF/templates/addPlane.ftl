@@ -25,27 +25,27 @@
 
 
 
-    <form action="/j_spring_security_logout" method="get">
+    <form action="/logout" style = "margin-left: 500px">
         <input type="submit" value="logout">
     </form>
 
 
-    <form action="/staff/adminStaff">
+    <form action="/staff/adminStaff" style = "margin-left: 500px">
         <input type="submit" value="Go to Staff Page">
     </form>
-    <form action="/flight/admin">
+    <form action="/flight/admin" style = "margin-left: 500px">
         <input type="submit" value="Go to Flight Page">
     </form>
-    <form action="/planes/addNewPlane">
+    <form action="/planes/addNewPlane" style = "margin-left: 500px">
         <input type="submit" value="Go to Plane Page">
     </form>
 
-    <form action="/stat">
+    <form action="/stat" style = "margin-left: 500px">
         <input type="submit" value="Go to Stat Page">
     </form>
 
 <#list planeList as plane>
-<table class="table vehicle-features">
+<table class="table vehicle-features" style = "margin-left: 500px">
     <tr>
         <td>Name</td>
         <td id="model">${plane.name}</td>
@@ -61,7 +61,7 @@
 <tr>
 </#list>
 
-<@sf.form action='/planes/addNewPlane' method='POST' name="plane_form" modelAttribute="planeForm">
+<@sf.form action='/planes/addNewPlane' method='POST' name="plane_form" modelAttribute="planeForm" style = "margin-left: 500px">
 
     <@sf.input path="name" type="text" name="name" id="name" placeholder="Enter planes Name"/>
 

@@ -1,6 +1,7 @@
 package main.ilyazamkovoy.form;
 
 
+import main.ilyazamkovoy.entity.UserEntity;
 import org.hibernate.validator.constraints.NotEmpty;
 import main.ilyazamkovoy.entity.enums.Role;
 
@@ -31,9 +32,6 @@ public class UserForm {
 
     @Enumerated(EnumType.STRING)
     private Role role;
-
-
-
 
     public Role getRole() {
         return role;
@@ -75,5 +73,14 @@ public class UserForm {
         this.passw = passw;
     }
 
+    public UserEntity transformToEntity() {
+        UserEntity userEntity = new UserEntity();
+        userEntity.setEmail(email);
+        userEntity.setFirstName(firstName);
+        userEntity.setLastName(lastName);
+        userEntity.setPassw(passw);
+        userEntity.setRole(Role.ROLE_CLIENT);
+        return userEntity;
+    }
 
 }

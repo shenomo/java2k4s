@@ -6,8 +6,8 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="/resources/css/style.css">
-    <link rel="stylesheet" type="text/css" href="/resources/css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/jquery-ui.css">
 </head>
 <body>
 <div id="content">
@@ -16,15 +16,19 @@
 
 
 
-    <form href="/logout">
+    <form href="/logout" style = "margin-left: 500px">
         <input type="submit" value="logout">
     </form>
-    <form action="/stat">
+    <form action="/stat" style = "margin-left: 500px">
         <input type="submit" value="Go to Stat Page">
     </form>
+    <form action="/flight/showUser" style = "margin-left: 500px">
+        <input type="submit" value="Go to See Your Flight">
+    </form>
+
 
 <#list flightList as flight>
-<table class="table vehicle-features">
+<table class="table vehicle-features" style = "margin-left: 500px">
     <tr>
         <td>Departure Time</td>
         <td id="model">${flight.departureTime}</td>
@@ -50,7 +54,7 @@
 </#list>
 
 
-<@sf.form action='/flight/client' method='POST' name="flight_form" modelAttribute="flightForm">
+<@sf.form action='/flight/client' method='POST' name="flight_form" modelAttribute="flightForm" style = "margin-left: 500px">
 
 
     <@sf.input path="identity" type="text" name="identity" id="identity" placeholder="Enter your Flight Identity"/>

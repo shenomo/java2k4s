@@ -1,5 +1,7 @@
 package main.ilyazamkovoy.form;
 
+import main.ilyazamkovoy.entity.FlightEntity;
+
 /**
  * Created by zamkovoyilya on 04/05/16.
  */
@@ -49,5 +51,14 @@ public class FlightForm {
 
     public void setIdentity(String identity) {
         this.identity = identity;
+    }
+
+    public static FlightForm fromEntity(FlightEntity flightEntity) {
+        FlightForm flightForm = new FlightForm();
+        flightForm.setArrivingTime(flightEntity.getArrivingTime());
+        flightForm.setDepartureTime(flightEntity.getDepartureTime());
+        flightForm.setFromDirection(flightEntity.getFromDirection());
+        flightForm.setToDirection(flightEntity.getToDirection());
+        return flightForm;
     }
 }

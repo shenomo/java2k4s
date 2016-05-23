@@ -2,10 +2,8 @@ package main.ilyazamkovoy.controllers;
 
 import main.ilyazamkovoy.entity.FlightEntity;
 import main.ilyazamkovoy.entity.StaffEntity;
-import main.ilyazamkovoy.entity.UserEntity;
 import main.ilyazamkovoy.form.FlightForm;
 import main.ilyazamkovoy.form.StaffForm;
-import main.ilyazamkovoy.form.UserForm;
 import main.ilyazamkovoy.repositories.StaffRepository;
 import main.ilyazamkovoy.services.FlightService;
 import main.ilyazamkovoy.services.StaffService;
@@ -19,9 +17,6 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import main.ilyazamkovoy.repositories.UserRepository;
-import main.ilyazamkovoy.services.UserService;
 
 import javax.validation.Valid;
 import java.util.List;
@@ -85,12 +80,7 @@ public class StaffContoller {
 
         FlightEntity flightEntity = flightService.getFlightByIdentity(staffEntity.getFlightIdentity());
 
-        FlightForm flightForm = new FlightForm();
-
-        flightForm.setArrivingTime(flightEntity.getArrivingTime());
-        flightForm.setDepartureTime(flightEntity.getDepartureTime());
-        flightForm.setFromDirection(flightEntity.getFromDirection());
-        flightForm.setToDirection(flightEntity.getToDirection());
+        FlightForm flightForm  = FlightForm.fromEntity(flightEntity);
 
         modelMap.addAttribute("flightForm", flightForm);
 

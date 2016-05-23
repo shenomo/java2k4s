@@ -26,28 +26,28 @@
 
 
 
-        <form href="/logout">
+        <form href="/logout" style = "margin-left: 500px">
             <input type="submit" value="logout">
         </form>
 
 
-        <form action="/staff/adminStaff">
+        <form action="/staff/adminStaff" style = "margin-left: 500px">
             <input type="submit" value="Go to Staff Page">
         </form>
-        <form action="/flight/admin">
+        <form action="/flight/admin" style = "margin-left: 500px">
             <input type="submit" value="Go to Flight Page">
         </form>
-        <form action="/planes/addNewPlane">
+        <form action="/planes/addNewPlane" style = "margin-left: 500px">
             <input type="submit" value="Go to Plane Page">
         </form>
 
-        <form action="/stat">
+        <form action="/stat" style = "margin-left: 500px">
             <input type="submit" value="Go to Stat Page">
         </form>
 
 
     <#list staffList as staff>
-    <table class="table vehicle-features">
+    <table class="table vehicle-features" style = "margin-left: 500px">
         <tr>
             <td>Staff identity</td>
             <td id="model">${staff.identity}</td>
@@ -67,7 +67,7 @@
     <tr>
     </#list>
 
-    <@sf.form action='/staff/adminStaff' method='POST' name="staff_form" modelAttribute="staffForm">
+    <@sf.form action='/staff/adminStaff' method='POST' name="staff_form" modelAttribute="staffForm" style = "margin-left: 500px">
 
         <@sf.input path="identity" type="text" name="identity" id="identity" placeholder="Enter staff identity"/>
 

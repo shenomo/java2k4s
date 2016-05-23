@@ -1,14 +1,13 @@
 package main.ilyazamkovoy.services.impl;
 
-import main.ilyazamkovoy.entity.enums.Role;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import main.ilyazamkovoy.entity.UserEntity;
 import main.ilyazamkovoy.form.UserForm;
 import main.ilyazamkovoy.repositories.UserRepository;
 import main.ilyazamkovoy.services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by zamkovoyilya on 03/05/16.
@@ -24,14 +23,6 @@ public class UserServiceImpl implements UserService {
     @Transactional
     public void saveNewUser(UserForm userForm) {
         UserEntity userEntity = new UserEntity();
-
-        userEntity.setEmail(userForm.getEmail());
-        userEntity.setFirstName(userForm.getFirstName());
-        userEntity.setLastName(userForm.getLastName());
-        userEntity.setEmail(userForm.getEmail());
-        userEntity.setPassw(userForm.getPassw());
-        userEntity.setRole(Role.ROLE_CLIENT);
-
         userRepository.save(userEntity);
     }
 

@@ -23,7 +23,7 @@
 
 
 
-    <div id="flight_info">
+    <div id="flight_info" style = "margin-left: 500px">
 
         <input type="text" name="from" id="from" placeholder="From Direction">
 
@@ -32,7 +32,7 @@
         <input type="submit" value="show" onclick="showFlights()" >
 
     </div>
-        <table id="res">
+        <table id="res" style = "margin-left: 500px">
             <tr>
                 <td>From</td><td>Time from</td><td>To</td><td>Time To</td>
             </tr>

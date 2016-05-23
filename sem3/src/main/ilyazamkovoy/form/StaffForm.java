@@ -7,7 +7,6 @@ package main.ilyazamkovoy.form;
 
 public class StaffForm {
 
-
     private Long id;
     private String identity;
     private String login;
