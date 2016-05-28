@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controllers.UserController">
+   <top>
+      <Label text="World of Flight" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+   </top>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" fx:id="table">
+         <columns>
+            <TableColumn prefWidth="75.0" text="from direction" fx:id="firstColumn" editable="false"
+                         sortable="false"/>
+            <TableColumn prefWidth="75.0" text="to direction" fx:id="secondColumn" editable="false"
+                         sortable="false"/>
+            <TableColumn prefWidth="75.0" text="arriving time" fx:id="thirdColumn" editable="false"
+                         sortable="false"/>
+            <TableColumn prefWidth="75.0" text="departure time" fx:id="fourthColumn" editable="false"
+                         sortable="false"/>
+            <TableColumn prefWidth="75.0" text="identity" fx:id="fifthColumn" editable="false" sortable="false"/>
+         </columns>
+      </TableView>
+   </center>
+</BorderPane>

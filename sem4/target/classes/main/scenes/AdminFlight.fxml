@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="main.controllers.AdminContoller">
+    <top>
+        <Label text="World of Flight" BorderPane.alignment="CENTER">
+            <font>
+                <Font size="48.0"/>
+            </font>
+        </Label>
+    </top>
+    <left>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button mnemonicParsing="false" prefHeight="29.0" prefWidth="100.0" text="Plane Page"
+                        fx:id="planesPage"/>
+                <Button mnemonicParsing="false" prefHeight="32.0" prefWidth="103.0" text="Flight Page"
+                        fx:id="flightPage"/>
+                <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="101.0" text="Staff Page"
+                        fx:id="staffPage"/>
+                <Button mnemonicParsing="false" prefHeight="33.0" prefWidth="100.0" text="Logout" fx:id="logout"/>
+            </children>
+        </VBox>
+    </left>
+    <right>
+        <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+            <children>
+                <TextField prefHeight="14.0" prefWidth="100.0" promptText="Departure time" fx:id="departureTime"/>
+                <TextField prefHeight="14.0" prefWidth="100.0" promptText="Arriving time" fx:id="arrivingTime"/>
+                <TextField promptText="To Direction" fx:id="toDirection"/>
+                <TextField promptText="From Direction" fx:id="fromDirection"/>
+                <TextField promptText="Identity" fx:id="identity"/>
+                <Button mnemonicParsing="false"  onAction="#addFlight"  prefHeight="34.0" prefWidth="109.0" text="Add Flight"/>
+            </children>
+        </VBox>
+    </right>
+    <center>
+        <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" fx:id="table">
+            <columns>
+                <TableColumn prefWidth="75.0" text="from direction" fx:id="fromDirectionColumn" editable="false"
+                             sortable="false"/>
+                <TableColumn prefWidth="75.0" text="to direction" fx:id="toDirectionColumn" editable="false"
+                             sortable="false"/>
+                <TableColumn prefWidth="75.0" text="arriving time" fx:id="arrivingTimeColumn" editable="false"
+                             sortable="false"/>
+                <TableColumn prefWidth="75.0" text="departure time" fx:id="departureTimeColumn" editable="false"
+                             sortable="false"/>
+                <TableColumn prefWidth="75.0" text="identity" fx:id="identityColumn" editable="false" sortable="false"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
